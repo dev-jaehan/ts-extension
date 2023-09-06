@@ -51,7 +51,7 @@ describe("String extension", () => {
     expect(result).toBe("12345678901...");
   });
 
-  it("truncate()가 호출되면 문자열의 길이가 전달된 길이 매개변수만큼 클 경우, 그대로 반환되어야 한다", () => {
+  it("truncate()가 호출되면 문자열의 길이가 전달된 길이 매개변수보다 작을 경우, 그대로 반환되어야 한다", () => {
     const value = "12345678901234567890";
     const result = value.truncate(30);
 
