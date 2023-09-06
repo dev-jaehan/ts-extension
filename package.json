@@ -2,15 +2,25 @@
   "author": "Jaehan Choi <soyluv70@naver.com>",
   "description": "TypeScript Extension",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "name": "@devjh/ts-extension",
-  "version": "0.0.1",
+  "name": "@dev-jaehan/ts-extension",
+  "version": "0.0.2",
   "packageManager": "yarn@1.22.19",
   "license": "MIT",
+  "homepage": "https://github.com/dev-jaehan/ts-extension#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/dev-jaehan/ts-extension.git"
   },
+  "bugs": {
+    "url": "https://github.com/dev-jaehan/ts-extension/issues"
+  },
+  "keywords": [
+    "typescript",
+    "extension",
+    "extension method"
+  ],
   "scripts": {
     "dev": "ts-node src",
     "build": "tsc --project tsconfig.build.json",
