@@ -25,3 +25,7 @@ string.addSuffix("op"); // abcdefghijklmnop
 string.capitalize(); // Abcdefghhijklmn
 string.truncate(); // abcdefghij...
 ```
+
+### License
+
+MIT
