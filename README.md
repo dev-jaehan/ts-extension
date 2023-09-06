@@ -2,7 +2,23 @@
 
 Extension methods for TypeScript
 
+## Installation
+
+```
+npm i @dev-jaehan/ts-extension
+```
+
+```
+yarn add @dev-jaehan/ts-extension
+```
+
 ## Usage
+
+Please import the package once from anywhere.
+
+```typescript
+import "@dev-jaehan/ts-extension";
+```
 
 ### Array
 
@@ -25,7 +41,3 @@ string.addSuffix("op"); // abcdefghijklmnop
 string.capitalize(); // Abcdefghhijklmn
 string.truncate(); // abcdefghij...
 ```
-
-### License
-
-MIT
