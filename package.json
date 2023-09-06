@@ -1,7 +1,7 @@
 {
   "author": "Jaehan Choi <soyluv70@naver.com>",
   "description": "TypeScript Extension",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "name": "@dev-jaehan/ts-extension",
