@@ -41,3 +41,21 @@ string.addSuffix("op"); // abcdefghijklmnop
 string.capitalize(); // Abcdefghhijklmn
 string.truncate(); // abcdefghij...
 ```
+
+### Object
+
+```typescript
+const obj = {
+  a: 1,
+  b: "a",
+  c: 24,
+};
+const newObj = obj.deepCopy();
+/*
+newObj = {
+  a: 1,
+  b: 'a',
+  c: 24,
+}
+*/
+```
