@@ -35,5 +35,3 @@ Array.prototype.shuffle = function <T>(): T[] | undefined {
   }
   return this;
 };
-
-console.log("");
