@@ -21,20 +21,27 @@ Number.prototype.toFixedNumber = function (dec: number = 2): number {
 };
 
 Number.prototype.toLocaleDateTime = function (): string {
-  const date = new Date(this.valueOf());
+  const date = new Date(this.valueOf() * 1000);
   return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
 };
 
 Number.prototype.convertUnixTimestamp = function (): object {
-  const date = new Date(1694240477 * 1000);
+  const dayOfWeek = ["일", "월", "화", "수", "목", "금", "토"];
+
+  const date = new Date(this.valueOf() * 1000);
+  const pad = (num: number) => num.toString().padStart(2, "0");
+
   const obj = {
-    date,
-    year: date.getFullYear(),
-    month: "0" + (date.getMonth() + 1),
-    day: "0" + date.getDate(),
-    hour: "0" + date.getHours(),
-    minute: "0" + date.getMinutes(),
-    second: "0" + date.getSeconds(),
+    yyyy: date.getFullYear().toString(),
+    yy: date.getFullYear().toString().slice(-2),
+    MM: pad(date.getMonth() + 1),
+    dd: pad(date.getDate()),
+    HH: pad(date.getHours()),
+    hh: pad(date.getHours() % 12 || 12),
+    mm: pad(date.getMinutes()),
+    ss: pad(date.getSeconds()),
+    day: dayOfWeek[date.getDay()],
   };
+
   return obj;
 };
