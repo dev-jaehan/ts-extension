@@ -2,6 +2,17 @@
 
 Extension methods for TypeScript
 
+</br>
+
+[![Latest Stable Version](https://img.shields.io/npm/v/@dev-jaehan/ts-extension.svg)](https://www.npmjs.com/package/@dev-jaehan/ts-extension)
+
+[![NPM Downloads](https://img.shields.io/npm/dm/@dev-jaehan/ts-extension.svg)](https://www.npmjs.com/package/@dev-jaehan/ts-extension)
+[![NPM Downloads](https://img.shields.io/npm/dt/@dev-jaehan/ts-extension.svg)](https://www.npmjs.com/package/@dev-jaehan/ts-extension)
+
+[![Bundlephobia Size](https://img.shields.io/bundlephobia/minzip/@dev-jaehan/ts-extension.svg)](https://www.npmjs.com/package/@dev-jaehan/ts-extension)
+
+[![License](https://img.shields.io/npm/l/utility-types.svg?style=flat)](https://david-dm.org/piotrwitek/utility-types?type=peer)
+
 ## Installation
 
 ```
