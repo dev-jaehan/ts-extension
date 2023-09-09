@@ -5,7 +5,7 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "name": "@dev-jaehan/ts-extension",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "packageManager": "yarn@1.22.19",
   "license": "MIT",
   "homepage": "https://github.com/dev-jaehan/ts-extension#readme",
