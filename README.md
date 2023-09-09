@@ -59,3 +59,29 @@ newObj = {
 }
 */
 ```
+
+### Number
+
+```typescript
+const num1 = 1.1234567;
+num1.isInt(); // false
+num2.isFloat(); // true
+num2.toFixedNumber(); // 1.12 (return type: number)
+
+const timeStamp = 1694242562;
+timeStamp.toLocaleDateTime(); // 2023. 9. 9. 오후 3:56:02
+const date = timeStamp.convertUnixTimestamp();
+/*
+date = {
+  yyyy: '2023',
+  yy: '23',
+  MM: '11',
+  dd: '09',
+  HH: '15',
+  hh: '03',
+  mm: '56',
+  ss: '02',
+  day: '목'
+}
+*/
+```
