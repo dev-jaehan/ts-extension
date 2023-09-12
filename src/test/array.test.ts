@@ -31,4 +31,27 @@ describe("Array extension", () => {
     const result = arr.uniq();
     expect(result).toEqual([3, 1, 2, 4]);
   });
+
+  it("deepCopy() 함수가 호출되면 새로운 메모리힙에 할당되어 복사된 배열이 반환되어야 한다", () => {
+    const arr = [1, 2, [3, 4], { a: 5, b: 6 }];
+    const result = arr.deepCopy();
+    expect(result === arr).toEqual(false);
+  });
+
+  it("deepCopy() 함수는 복사 대상 배열의 오브젝트 인덱스의 메소드까지 정상적으로 복사되어 반환되어야 한다", () => {
+    const arr = [
+      1.1,
+      22.1,
+      [3, 4],
+      {
+        a: () => 20,
+        b: () => "hi",
+      },
+    ];
+    const result = arr.deepCopy();
+    expect(
+      (result[3] as { a: () => number }).a() === 20 &&
+        (result[3] as { b: () => string }).b() === "hi"
+    ).toEqual(true);
+  });
 });
