@@ -5,6 +5,7 @@ interface Array<T> {
   removeBy(index: number): T | undefined;
   uniq(): T[] | undefined;
   shuffle(): T[] | undefined;
+  deepCopy(): T[];
 }
 
 Array.prototype.first = function <T>(): T | undefined {
@@ -34,4 +35,26 @@ Array.prototype.shuffle = function <T>(): T[] | undefined {
     [this[i], this[random]] = [this[random], this[i]];
   }
   return this;
+};
+
+function cloneArray<T>(arr: T) {
+  if (!Array.isArray(arr) || arr.length === 0) {
+    return arr;
+  }
+
+  const copy = [] as T[];
+
+  for (let item of arr) {
+    if (typeof item === "object" && item !== null) {
+      copy.push(cloneArray(item));
+    } else {
+      copy.push(item);
+    }
+  }
+
+  return copy as T;
+}
+
+Array.prototype.deepCopy = function <T>(): T[] {
+  return cloneArray(this);
 };
